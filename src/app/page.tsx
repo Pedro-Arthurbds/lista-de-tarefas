@@ -63,21 +63,24 @@ const home = () => {
               <div className="w-1 h-full bg-green-300"></div>
               <p className="flex-1 px-3 text-sm">Estudar React</p>
               <div className="flex items-center gap-2">
-                <SquarePen size={16} className="cursor-pointer" />
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <SquarePen size={16} className="cursor-pointer" />
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Editar Taraefa </DialogTitle>
+                    </DialogHeader>
+                    <div className="flex gap-2">
+                      <Input placeholder="Editar Tarefa" />
+                      <Button className="cursor-pointer">Editar</Button>
+                    </div>
+                  </DialogContent>
+                </Dialog>
                 <Trash size={16} className="cursor-pointer" />
               </div>
             </div>
           </div>
-
-          <Dialog>
-            <DialogTrigger>Abrir</DialogTrigger>
-            <DialogHeader>
-              <DialogTitle>Editar Taraefa </DialogTitle>
-            </DialogHeader>
-            <DialogContent>
-              <p>epedro</p>
-            </DialogContent>
-          </Dialog>
 
           <div className="flex justify-between mt-4">
             <div className="flex gap-2 ">
