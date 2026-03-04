@@ -2,12 +2,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import EditTask from "@/components/edit-task";
 import {
   Plus,
   List,
   Check,
   MoveDownRight,
-  SquarePen,
   Trash,
   ListChecks,
   TrashIcon,
@@ -24,13 +24,6 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Badge } from "@/components/ui/badge";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 
 const home = () => {
   return (
@@ -63,20 +56,8 @@ const home = () => {
               <div className="w-1 h-full bg-green-300"></div>
               <p className="flex-1 px-3 text-sm">Estudar React</p>
               <div className="flex items-center gap-2">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <SquarePen size={16} className="cursor-pointer" />
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Editar Taraefa </DialogTitle>
-                    </DialogHeader>
-                    <div className="flex gap-2">
-                      <Input placeholder="Editar Tarefa" />
-                      <Button className="cursor-pointer">Editar</Button>
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                <EditTask />
+
                 <Trash size={16} className="cursor-pointer" />
               </div>
             </div>
